@@ -1,3 +1,4 @@
+import Sidebar from '@/components/Sidebar'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <main>
-        <h1>Hello</h1>
+        <Sidebar/>
       </main>
     </>
   )
