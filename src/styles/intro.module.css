@@ -1,0 +1,38 @@
+.icon {
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+.caption {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 27px;
+}
+.textBox {
+    min-height: 126px;
+    border-radius: 15px;
+    border: 1.5px solid rgba(32, 33, 35, .5);
+    color: rgba(32, 33, 35, .65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+}
+
+.inputBox {
+    border: 1.5px solid rgba(32, 33, 35, .65);
+    width: 80%;
+    padding: 14px 24px;
+    border-radius: 15px;
+    margin-bottom: 36px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inputBox input {
+    width: 95%;
+}
+.inputBox input:focus-visible {
+    outline: none;
+}
