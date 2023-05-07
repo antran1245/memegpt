@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPaperPlane } from "@fortawesome/free-regular-svg-icons"
 import styles from '@/styles/intro.module.css'
+import InputEmoji from './InputEmoji'
 
 export default function Intro() {
     return(
@@ -25,10 +24,7 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-            <div className={styles.inputBox}>
-                <input type="text" placeholder="Input Emoji"/>
-                <FontAwesomeIcon icon={faPaperPlane}/>
-            </div>
+            <InputEmoji/>
         </div>
     )
 }
