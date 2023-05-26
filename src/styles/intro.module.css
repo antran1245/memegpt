@@ -36,3 +36,20 @@
 .inputBox input:focus-visible {
     outline: none;
 }
+
+.iconBox {
+    position: relative;
+    width: 50px;
+}
+
+.popupIconBox {
+    position: absolute;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    top: -350px;
+    left: -300px;
+}
+.popupTriangle {
+    
+}
