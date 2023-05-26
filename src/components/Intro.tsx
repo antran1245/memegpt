@@ -1,7 +1,14 @@
 import styles from '@/styles/intro.module.css'
 import InputEmoji from './InputEmoji'
 
-export default function Intro() {
+interface IntroProps {
+    setChatting: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Intro({ setChatting }: IntroProps) {
+    const onInput = () => {
+        setChatting(true)
+    }
     return(
         <div className="flex flex-col items-center flex-auto justify-between">
             <div className="flex flex-col items-center mt-[183px]">
@@ -24,7 +31,7 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-            <InputEmoji/>
+            <InputEmoji onInput={onInput}/>
         </div>
     )
 }

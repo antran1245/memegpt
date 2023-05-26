@@ -2,11 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faPencil, faTrashCan, faEllipsis } from "@fortawesome/free-solid-svg-icons"
 import { faMessage, faUserCircle } from "@fortawesome/free-regular-svg-icons"
 
-export default function Sidebar() {
+interface SidebarProps {
+    setChatting: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Sidebar({ setChatting } : SidebarProps) {
     return(
         <div className="bg-black h-[100vh] w-[345px] flex text-white">
             <div className="mt-[14px] flex flex-col w-[100%]">
-                <button className="rounded-[20px] border-2 text-[22px] h-[78px] w-[323px] flex-none mx-auto">
+                <button className="rounded-[20px] border-2 text-[22px] h-[78px] w-[323px] flex-none mx-auto" onClick={() => setChatting(false)}>
                     <FontAwesomeIcon icon={faPlus} className="mr-[43px]"/>
                     Find New Meme
                 </button>
