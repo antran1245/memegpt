@@ -44,12 +44,29 @@
 
 .popupIconBox {
     position: absolute;
-    border: 1px solid black;
     width: 300px;
     height: 300px;
     top: -350px;
     left: -300px;
+    filter: drop-shadow(0px 0px 10px black);
+    display: flex;
+    flex-direction: column;
+}
+.popupIcon {
+    position: relative;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 90%;
+    width: 100%;
 }
 .popupTriangle {
-    
+    border-width: 0 40px 40px 0;
+    border-color: transparent white transparent transparent;
+    border-bottom-right-radius: 10px;
+    border-top-color: transparent;
+    height: 0px;
+    width: 0px;
+    align-self: flex-end;
 }

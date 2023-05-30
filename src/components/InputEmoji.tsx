@@ -13,7 +13,7 @@ export default function InputEmoji( { onInput } : InputEmojiProps ) {
             <div className={styles.iconBox}>
                 <div className={styles.popupIconBox}>
                     <div className={styles.popupIcon}>hi</div>
-                    <span className={styles.popupTriangle}></span>
+                    <div className={styles.popupTriangle}></div>
                 </div>
                 <FontAwesomeIcon icon={faFaceSmile} />
                 <FontAwesomeIcon icon={faPaperPlane} onClick={onInput}/>
