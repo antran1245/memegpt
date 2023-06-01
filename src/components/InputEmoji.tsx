@@ -8,11 +8,13 @@ interface InputEmojiProps {
 }
 
 export default function InputEmoji( { onInput } : InputEmojiProps ) {
-    const [emoji, setEmoji] = useState<any>(null)
+    const [emoji, setEmoji] = useState<string[] | null>(null)
     useEffect(() => {
         fetch('/api/emojiDataset')
         .then(resp => resp.json())
-        .then(data => setEmoji(data.dataset))
+        .then(data => {
+            setEmoji([...data.dataset])
+        })
         .catch(err => console.log(err))
     }, [])
     return(
@@ -20,7 +22,7 @@ export default function InputEmoji( { onInput } : InputEmojiProps ) {
             <input type="text" placeholder="Input Emoji"/>
             <div className={styles.iconBox}>
                 <div className={styles.popupIconBox}>
-                    <div className={styles.popupIcon}>{emoji[0]}</div>
+                    <div className={styles.popupIcon}>{emoji? emoji[0] : ""}</div>
                     <div className={styles.popupTriangle}></div>
                 </div>
                 <FontAwesomeIcon icon={faFaceSmile} />
