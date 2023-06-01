@@ -60,6 +60,13 @@
     border-top-right-radius: 10px;
     height: 90%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+}
+.popupIcon span {
+    cursor: pointer;
 }
 .popupTriangle {
     border-width: 0 40px 40px 0;
